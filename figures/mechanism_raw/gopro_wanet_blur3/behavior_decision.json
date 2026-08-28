@@ -1,0 +1,21 @@
+{
+  "label": "attack_effect_recovery_or_counterproductive",
+  "rationale": [
+    "Restoration after degradation increases ASR relative to degradation-only by 0.5200."
+  ],
+  "caveats": [
+    "This is an attack-effect recovery signal, not trigger recovery proof without geometry, feature, or residual evidence."
+  ],
+  "evidence": {
+    "defense_output_setting": "degradation_restoration_poisoned",
+    "final_clean_setting": "degradation_restoration_clean",
+    "final_ca": 0.794921875,
+    "final_asr": 0.56,
+    "final_pa": 0.8203125,
+    "origin_asr": 0.976,
+    "origin_pa": 0.76171875,
+    "degradation_asr": 0.04,
+    "rd_asr": 0.56,
+    "expected_behavior": "attack_effect_recovery_or_counterproductive"
+  }
+}
