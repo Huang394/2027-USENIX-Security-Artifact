@@ -1,0 +1,158 @@
+2026-08-23 21:31:14,803 [INFO] Run log: logs/20260823_213114_CIFAR10ImageFolder_WaNet_diffusionzip_200.0_seed1234.log
+Using the CIFAR10ImageFolder
+The at_threshold: 10
+2026-08-23 21:31:15,220 [INFO] Using device: cuda:0
+====================================================================================
+Non-default run settings
+====================================================================================
+dataset: CIFAR10ImageFolder
+attack_method: WaNet
+attack_schedule: WaNet
+img_size: 32
+deg: diffusionzip
+deg_scale: 200.0
+purify_clean_test: True
+purify_poisoned_test: True
+use_purified_clean_test: True
+use_purified_pois_test: True
+purifier_backend: diffusionzip
+diffusionzip_start_t: 200
+degradation_type: diffusionzip
+degradation_strength: 200.0
+------------------------------------------------------------------------------------
+Runtime metadata
+------------------------------------------------------------------------------------
+mode: 3
+classes: 10
+device: cuda:0
+run_log_path: logs/20260823_213114_CIFAR10ImageFolder_WaNet_diffusionzip_200.0_seed1234.log
+====================================================================================
+Mode is 3
+The diffusion model is running on device:cuda:0
+The dataset for purification is: Dataset Origdataset
+    Number of datapoints: 10000
+    Root location: datasets/CIFAR10ImageFolder/val
+    Split: val
+    StandardTransform
+Transform: Compose(
+               Resize(size=(32, 32), interpolation=bilinear, max_size=None, antialias=True)
+               ToTensor()
+           )
+Using ConcatCLeanDataset
+img_size 32
+(256//args.img_size) 8
+Run DiffusionZIP. start_t = 200, 20 sampling steps. No ZIP degradation operators are used.
+Dataset has size 160
+Start from 0
+  0%|          | 0/5 [00:00<?, ?it/s]
+  0%|          | 0/5 [00:00<?, ?it/s][A
+ 20%|██        | 1/5 [00:00<00:02,  1.50it/s][A
+ 40%|████      | 2/5 [00:01<00:01,  1.88it/s][A
+ 60%|██████    | 3/5 [00:01<00:00,  2.05it/s][A
+ 80%|████████  | 4/5 [00:01<00:00,  2.14it/s][A
+100%|██████████| 5/5 [00:02<00:00,  2.20it/s][A100%|██████████| 5/5 [00:02<00:00,  2.08it/s]
+ 20%|██        | 1/5 [00:03<00:15,  3.79s/it]
+  0%|          | 0/5 [00:00<?, ?it/s][A
+ 20%|██        | 1/5 [00:00<00:01,  2.31it/s][A
+ 40%|████      | 2/5 [00:00<00:01,  2.30it/s][A
+ 60%|██████    | 3/5 [00:01<00:00,  2.30it/s][A
+ 80%|████████  | 4/5 [00:01<00:00,  2.30it/s][A
+100%|██████████| 5/5 [00:02<00:00,  2.30it/s][A100%|██████████| 5/5 [00:02<00:00,  2.30it/s]
+ 40%|████      | 2/5 [00:07<00:10,  3.55s/it]
+  0%|          | 0/5 [00:00<?, ?it/s][A
+ 20%|██        | 1/5 [00:00<00:01,  2.30it/s][A
+ 40%|████      | 2/5 [00:00<00:01,  2.30it/s][A
+ 60%|██████    | 3/5 [00:01<00:00,  2.30it/s][A
+ 80%|████████  | 4/5 [00:01<00:00,  2.30it/s][A
+100%|██████████| 5/5 [00:02<00:00,  2.30it/s][A100%|██████████| 5/5 [00:02<00:00,  2.30it/s]
+ 60%|██████    | 3/5 [00:10<00:06,  3.49s/it]
+  0%|          | 0/5 [00:00<?, ?it/s][A
+ 20%|██        | 1/5 [00:00<00:01,  2.30it/s][A
+ 40%|████      | 2/5 [00:00<00:01,  2.30it/s][A
+ 60%|██████    | 3/5 [00:01<00:00,  2.30it/s][A
+ 80%|████████  | 4/5 [00:01<00:00,  2.30it/s][A
+100%|██████████| 5/5 [00:02<00:00,  2.30it/s][A100%|██████████| 5/5 [00:02<00:00,  2.30it/s]
+ 80%|████████  | 4/5 [00:14<00:03,  3.48s/it]
+  0%|          | 0/5 [00:00<?, ?it/s][A
+ 20%|██        | 1/5 [00:00<00:01,  2.30it/s][A
+ 40%|████      | 2/5 [00:00<00:01,  2.30it/s][A
+ 60%|██████    | 3/5 [00:01<00:00,  2.30it/s][A
+ 80%|████████  | 4/5 [00:01<00:00,  2.30it/s][A
+100%|██████████| 5/5 [00:02<00:00,  2.30it/s][A100%|██████████| 5/5 [00:02<00:00,  2.30it/s]
+100%|██████████| 5/5 [00:17<00:00,  3.48s/it]100%|██████████| 5/5 [00:17<00:00,  3.51s/it]
+Using SplitCLeanDataset
+type test
+split_number_in_image: 64
+splited_images_number: 10000
+The diffusion model is running on device:cuda:0
+The dataset for purification is: Dataset PoisonedDataset
+    Number of datapoints: 10000
+    Root location: datasets/CIFAR10ImageFolder/val
+    Split: val
+    StandardTransform
+Transform: Compose(
+               Resize(size=(32, 32), interpolation=bilinear, max_size=None, antialias=True)
+               ToTensor()
+           )
+img_size 32
+(256//args.img_size) 8
+Run DiffusionZIP. start_t = 200, 20 sampling steps. No ZIP degradation operators are used.
+Dataset has size 160
+Start from 0
+  0%|          | 0/5 [00:00<?, ?it/s]
+  0%|          | 0/5 [00:00<?, ?it/s][A
+ 20%|██        | 1/5 [00:00<00:01,  2.30it/s][A
+ 40%|████      | 2/5 [00:00<00:01,  2.30it/s][A
+ 60%|██████    | 3/5 [00:01<00:00,  2.30it/s][A
+ 80%|████████  | 4/5 [00:01<00:00,  2.30it/s][A
+100%|██████████| 5/5 [00:02<00:00,  2.30it/s][A100%|██████████| 5/5 [00:02<00:00,  2.30it/s]
+ 20%|██        | 1/5 [00:04<00:17,  4.29s/it]
+  0%|          | 0/5 [00:00<?, ?it/s][A
+ 20%|██        | 1/5 [00:00<00:01,  2.31it/s][A
+ 40%|████      | 2/5 [00:00<00:01,  2.30it/s][A
+ 60%|██████    | 3/5 [00:01<00:00,  2.30it/s][A
+ 80%|████████  | 4/5 [00:01<00:00,  2.30it/s][A
+100%|██████████| 5/5 [00:02<00:00,  2.30it/s][A100%|██████████| 5/5 [00:02<00:00,  2.30it/s]
+ 40%|████      | 2/5 [00:07<00:11,  3.80s/it]
+  0%|          | 0/5 [00:00<?, ?it/s][A
+ 20%|██        | 1/5 [00:00<00:01,  2.31it/s][A
+ 40%|████      | 2/5 [00:00<00:01,  2.30it/s][A
+ 60%|██████    | 3/5 [00:01<00:00,  2.30it/s][A
+ 80%|████████  | 4/5 [00:01<00:00,  2.30it/s][A
+100%|██████████| 5/5 [00:02<00:00,  2.30it/s][A100%|██████████| 5/5 [00:02<00:00,  2.30it/s]
+ 60%|██████    | 3/5 [00:11<00:07,  3.61s/it]
+  0%|          | 0/5 [00:00<?, ?it/s][A
+ 20%|██        | 1/5 [00:00<00:01,  2.31it/s][A
+ 40%|████      | 2/5 [00:00<00:01,  2.30it/s][A
+ 60%|██████    | 3/5 [00:01<00:00,  2.30it/s][A
+ 80%|████████  | 4/5 [00:01<00:00,  2.30it/s][A
+100%|██████████| 5/5 [00:02<00:00,  2.29it/s][A100%|██████████| 5/5 [00:02<00:00,  2.30it/s]
+ 80%|████████  | 4/5 [00:14<00:03,  3.53s/it]
+  0%|          | 0/5 [00:00<?, ?it/s][A
+ 20%|██        | 1/5 [00:00<00:01,  2.30it/s][A
+ 40%|████      | 2/5 [00:00<00:01,  2.30it/s][A
+ 60%|██████    | 3/5 [00:01<00:00,  2.30it/s][A
+ 80%|████████  | 4/5 [00:01<00:00,  2.29it/s][A
+100%|██████████| 5/5 [00:02<00:00,  2.29it/s][A100%|██████████| 5/5 [00:02<00:00,  2.30it/s]
+100%|██████████| 5/5 [00:17<00:00,  3.48s/it]100%|██████████| 5/5 [00:18<00:00,  3.61s/it]
+type test_pois
+split_number_in_image: 64
+splited_images_number: 10000
+====================================================================================
+purified_ins(args, clean_train, purified_clean_test, poisoned_train, purified_pois_test)
+====================================================================================
+Using Pre-trained model: CIFAR10ImageFolder_pretrain/WaNet/Res_34_32
+=================================================Loading Model ==================================================
+=================================================    Loaded    ==================================================
+==========Test result on benign test dataset(CA)==========
+[2026-08-23_21:32:16] Top-1 correct / Total: 5144/10000, Top-1 accuracy: 0.5144, Top-5 correct / Total: 9227/10000, Top-5 accuracy: 0.9227, time: 0.9000887870788574
+ class_acc:{0: 0.789, 1: 0.55, 2: 0.512, 3: 0.711, 4: 0.232, 5: 0.462, 6: 0.273, 7: 0.467, 8: 0.692, 9: 0.456}
+ASR_lables tensor([1, 1, 1,  ..., 1, 1, 1])
+==========Test result on poisoned test dataset(ASR)(Not including images with original label same as attack label)==========
+[2026-08-23_21:32:39] Top-1 correct / Total: 47/9000, Top-1 accuracy: 0.005222222222222222, Top-5 correct / Total: 1866/9000, Top-5 accuracy: 0.20733333333333334, time: 24.01013946533203
+ class_acc:{1: 0.005222222222222222}
+PA_lables tensor([0, 0, 0,  ..., 9, 9, 9])
+==========Test result on poisoned test dataset(PA)==========
+[2026-08-23_21:32:40] Top-1 correct / Total: 4248/10000, Top-1 accuracy: 0.4248, Top-5 correct / Total: 8874/10000, Top-5 accuracy: 0.8874, time: 24.85823965072632
+ class_acc:{0: 0.743, 1: 0.361, 2: 0.461, 3: 0.74, 4: 0.23, 5: 0.357, 6: 0.146, 7: 0.302, 8: 0.64, 9: 0.268}
+=================================================End==================================================

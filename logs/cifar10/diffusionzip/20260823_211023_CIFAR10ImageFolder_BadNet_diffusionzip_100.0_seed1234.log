@@ -1,0 +1,136 @@
+2026-08-23 21:10:23,620 [INFO] Run log: logs/20260823_211023_CIFAR10ImageFolder_BadNet_diffusionzip_100.0_seed1234.log
+Using the CIFAR10ImageFolder
+The at_threshold: 10
+2026-08-23 21:10:24,058 [INFO] Using device: cuda:0
+====================================================================================
+Non-default run settings
+====================================================================================
+dataset: CIFAR10ImageFolder
+img_size: 32
+deg: diffusionzip
+deg_scale: 100.0
+purify_clean_test: True
+purify_poisoned_test: True
+use_purified_clean_test: True
+use_purified_pois_test: True
+purifier_backend: diffusionzip
+diffusionzip_start_t: 100
+degradation_type: diffusionzip
+degradation_strength: 100.0
+------------------------------------------------------------------------------------
+Runtime metadata
+------------------------------------------------------------------------------------
+mode: 3
+classes: 10
+device: cuda:0
+run_log_path: logs/20260823_211023_CIFAR10ImageFolder_BadNet_diffusionzip_100.0_seed1234.log
+====================================================================================
+Mode is 3
+The diffusion model is running on device:cuda:0
+The dataset for purification is: Dataset Origdataset
+    Number of datapoints: 10000
+    Root location: datasets/CIFAR10ImageFolder/val
+    Split: val
+    StandardTransform
+Transform: Compose(
+               Resize(size=(32, 32), interpolation=bilinear, max_size=None, antialias=True)
+               ToTensor()
+           )
+Using ConcatCLeanDataset
+img_size 32
+(256//args.img_size) 8
+Run DiffusionZIP. start_t = 100, 20 sampling steps. No ZIP degradation operators are used.
+Dataset has size 160
+Start from 0
+  0%|          | 0/5 [00:00<?, ?it/s]
+  0%|          | 0/3 [00:00<?, ?it/s][A
+ 33%|███▎      | 1/3 [00:00<00:01,  1.08it/s][A
+ 67%|██████▋   | 2/3 [00:01<00:00,  1.32it/s][A
+100%|██████████| 3/3 [00:02<00:00,  1.44it/s][A100%|██████████| 3/3 [00:02<00:00,  1.37it/s]
+ 20%|██        | 1/5 [00:03<00:15,  3.82s/it]
+  0%|          | 0/3 [00:00<?, ?it/s][A
+ 33%|███▎      | 1/3 [00:00<00:01,  1.62it/s][A
+ 67%|██████▋   | 2/3 [00:01<00:00,  1.56it/s][A
+100%|██████████| 3/3 [00:01<00:00,  1.59it/s][A100%|██████████| 3/3 [00:01<00:00,  1.59it/s]
+ 40%|████      | 2/5 [00:07<00:10,  3.51s/it]
+  0%|          | 0/3 [00:00<?, ?it/s][A
+ 33%|███▎      | 1/3 [00:00<00:01,  1.61it/s][A
+ 67%|██████▋   | 2/3 [00:01<00:00,  1.53it/s][A
+100%|██████████| 3/3 [00:01<00:00,  1.57it/s][A100%|██████████| 3/3 [00:01<00:00,  1.56it/s]
+ 60%|██████    | 3/5 [00:10<00:06,  3.42s/it]
+  0%|          | 0/3 [00:00<?, ?it/s][A
+ 33%|███▎      | 1/3 [00:00<00:01,  1.60it/s][A
+ 67%|██████▋   | 2/3 [00:01<00:00,  1.57it/s][A
+100%|██████████| 3/3 [00:01<00:00,  1.57it/s][A100%|██████████| 3/3 [00:01<00:00,  1.57it/s]
+ 80%|████████  | 4/5 [00:13<00:03,  3.39s/it]
+  0%|          | 0/3 [00:00<?, ?it/s][A
+ 33%|███▎      | 1/3 [00:00<00:01,  1.64it/s][A
+ 67%|██████▋   | 2/3 [00:01<00:00,  1.57it/s][A
+100%|██████████| 3/3 [00:01<00:00,  1.55it/s][A100%|██████████| 3/3 [00:01<00:00,  1.56it/s]
+100%|██████████| 5/5 [00:17<00:00,  3.38s/it]100%|██████████| 5/5 [00:17<00:00,  3.43s/it]
+Using SplitCLeanDataset
+type test
+split_number_in_image: 64
+splited_images_number: 10001
+The diffusion model is running on device:cuda:0
+The dataset for purification is: Dataset PoisonedDataset
+    Number of datapoints: 10000
+    Root location: datasets/CIFAR10ImageFolder/val
+    Split: val
+    StandardTransform
+Transform: Compose(
+               Resize(size=(32, 32), interpolation=bilinear, max_size=None, antialias=True)
+               ToTensor()
+           )
+img_size 32
+(256//args.img_size) 8
+Run DiffusionZIP. start_t = 100, 20 sampling steps. No ZIP degradation operators are used.
+Dataset has size 160
+Start from 0
+  0%|          | 0/5 [00:00<?, ?it/s]
+  0%|          | 0/3 [00:00<?, ?it/s][A
+ 33%|███▎      | 1/3 [00:00<00:01,  1.57it/s][A
+ 67%|██████▋   | 2/3 [00:01<00:00,  1.55it/s][A
+100%|██████████| 3/3 [00:01<00:00,  1.63it/s][A100%|██████████| 3/3 [00:01<00:00,  1.61it/s]
+ 20%|██        | 1/5 [00:03<00:14,  3.63s/it]
+  0%|          | 0/3 [00:00<?, ?it/s][A
+ 33%|███▎      | 1/3 [00:00<00:01,  1.51it/s][A
+ 67%|██████▋   | 2/3 [00:01<00:00,  1.55it/s][A
+100%|██████████| 3/3 [00:01<00:00,  1.57it/s][A100%|██████████| 3/3 [00:01<00:00,  1.56it/s]
+ 40%|████      | 2/5 [00:06<00:10,  3.43s/it]
+  0%|          | 0/3 [00:00<?, ?it/s][A
+ 33%|███▎      | 1/3 [00:00<00:01,  1.65it/s][A
+ 67%|██████▋   | 2/3 [00:01<00:00,  1.61it/s][A
+100%|██████████| 3/3 [00:01<00:00,  1.60it/s][A100%|██████████| 3/3 [00:01<00:00,  1.60it/s]
+ 60%|██████    | 3/5 [00:10<00:06,  3.34s/it]
+  0%|          | 0/3 [00:00<?, ?it/s][A
+ 33%|███▎      | 1/3 [00:00<00:01,  1.64it/s][A
+ 67%|██████▋   | 2/3 [00:01<00:00,  1.56it/s][A
+100%|██████████| 3/3 [00:01<00:00,  1.60it/s][A100%|██████████| 3/3 [00:01<00:00,  1.60it/s]
+ 80%|████████  | 4/5 [00:13<00:03,  3.32s/it]
+  0%|          | 0/3 [00:00<?, ?it/s][A
+ 33%|███▎      | 1/3 [00:00<00:01,  1.62it/s][A
+ 67%|██████▋   | 2/3 [00:01<00:00,  1.56it/s][A
+100%|██████████| 3/3 [00:01<00:00,  1.59it/s][A100%|██████████| 3/3 [00:01<00:00,  1.59it/s]
+100%|██████████| 5/5 [00:16<00:00,  3.34s/it]100%|██████████| 5/5 [00:16<00:00,  3.38s/it]
+type test_pois
+split_number_in_image: 64
+splited_images_number: 10001
+====================================================================================
+purified_ins(args, clean_train, purified_clean_test, poisoned_train, purified_pois_test)
+====================================================================================
+Using Pre-trained model: CIFAR10ImageFolder_pretrain/BadNet/Res_34_32
+=================================================Loading Model ==================================================
+=================================================    Loaded    ==================================================
+==========Test result on benign test dataset(CA)==========
+[2026-08-23_21:11:25] Top-1 correct / Total: 7318/10001, Top-1 accuracy: 0.7317268273172682, Top-5 correct / Total: 9743/10001, Top-5 accuracy: 0.9742025797420258, time: 1.4358677864074707
+ class_acc:{0: 0.89, 1: 0.845, 2: 0.682, 3: 0.661, 4: 0.4945054945054945, 5: 0.702, 6: 0.572, 7: 0.776, 8: 0.862, 9: 0.833}
+ASR_lables tensor([1, 1, 1,  ..., 1, 1, 1])
+==========Test result on poisoned test dataset(ASR)(Not including images with original label same as attack label)==========
+[2026-08-23_21:12:04] Top-1 correct / Total: 7516/9001, Top-1 accuracy: 0.8350183312965226, Top-5 correct / Total: 8501/9001, Top-5 accuracy: 0.9444506165981558, time: 40.24185252189636
+ class_acc:{1: 0.8350183312965226}
+PA_lables tensor([0, 0, 0,  ..., 9, 9, 9])
+==========Test result on poisoned test dataset(PA)==========
+[2026-08-23_21:12:05] Top-1 correct / Total: 2120/10001, Top-1 accuracy: 0.21197880211978803, Top-5 correct / Total: 8429/10001, Top-5 accuracy: 0.8428157184281572, time: 41.33038783073425
+ class_acc:{0: 0.145, 1: 0.991, 2: 0.139, 3: 0.1, 4: 0.07, 5: 0.13586413586413587, 6: 0.121, 7: 0.197, 8: 0.083, 9: 0.138}
+=================================================End==================================================
