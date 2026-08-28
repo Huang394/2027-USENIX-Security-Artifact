@@ -1,0 +1,72 @@
+{
+  "name": "ots_issba_haze015",
+  "attack": "ISSBA",
+  "degradation": "haze",
+  "strength": 0.15,
+  "restoration_prior": "ConvIR-OTS",
+  "backdoored_model_path": "NOT_REDISTRIBUTED: see REPRODUCIBILITY.md external assets section",
+  "clean_dataset_path": "NOT_REDISTRIBUTED: full dataset-derived images are documented in REPRODUCIBILITY.md",
+  "poisoned_dataset_path": "NOT_REDISTRIBUTED: full dataset-derived images are documented in REPRODUCIBILITY.md",
+  "output_dir": "figures/mechanism_raw",
+  "defense_output_setting": "degradation_restoration_poisoned",
+  "expected_behavior": "clean_preserving_suppress",
+  "degraded_clean_dataset_path": "NOT_REDISTRIBUTED: full dataset-derived images are documented in REPRODUCIBILITY.md",
+  "degraded_poisoned_dataset_path": "NOT_REDISTRIBUTED: full dataset-derived images are documented in REPRODUCIBILITY.md",
+  "restored_clean_dataset_path": "NOT_REDISTRIBUTED: full dataset-derived images are documented in REPRODUCIBILITY.md",
+  "restored_poisoned_dataset_path": "NOT_REDISTRIBUTED: full dataset-derived images are documented in REPRODUCIBILITY.md",
+  "restored_degraded_clean_dataset_path": "NOT_REDISTRIBUTED: full dataset-derived images are documented in REPRODUCIBILITY.md",
+  "restored_degraded_poisoned_dataset_path": "NOT_REDISTRIBUTED: full dataset-derived images are documented in REPRODUCIBILITY.md",
+  "num_samples": 512,
+  "target_class": 1,
+  "true_class_filter": null,
+  "trigger_metadata": "invisible_sample_specific",
+  "analysis_modules": [
+    {
+      "name": "input_space",
+      "options": {}
+    },
+    {
+      "name": "frequency_global",
+      "options": {}
+    },
+    {
+      "name": "feature_invisible",
+      "options": {}
+    },
+    {
+      "name": "model_output",
+      "options": {}
+    },
+    {
+      "name": "feature_space",
+      "options": {}
+    }
+  ],
+  "trigger_mask_path": null,
+  "layers": [
+    "penultimate"
+  ],
+  "save_images": true,
+  "save_features": false,
+  "device": "auto",
+  "model_arch": "convir-backdoorbox-resnet34",
+  "num_classes": 20,
+  "image_size": 256,
+  "batch_size": 16,
+  "restoration_model_path": null,
+  "degradation_seed": 1234,
+  "prediction_distribution": true,
+  "centroid_sample_count": 128,
+  "ca_acceptable_threshold": 0.7,
+  "asr_low_threshold": 0.2,
+  "asr_high_threshold": 0.5,
+  "pa_high_threshold": 0.5,
+  "pa_recovery_delta": 0.2,
+  "asr_drop_delta": 0.2,
+  "asr_recovery_delta": 0.2,
+  "visual_evidence": true,
+  "visual_gradcam_layer": "layer4.2.conv2",
+  "visual_num_samples": 8,
+  "resolved_defense_output_setting": "degradation_restoration_poisoned",
+  "resolved_final_clean_setting": "degradation_restoration_clean"
+}

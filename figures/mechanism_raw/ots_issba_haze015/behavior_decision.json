@@ -1,0 +1,21 @@
+{
+  "label": "clean_preserving_suppress",
+  "rationale": [
+    "ASR drops by 0.9845 and poisoned accuracy recovers or reaches the high-PA threshold."
+  ],
+  "caveats": [],
+  "evidence": {
+    "defense_output_setting": "degradation_restoration_poisoned",
+    "final_clean_setting": "degradation_restoration_clean",
+    "final_ca": 0.888671875,
+    "final_asr": 0.015503875968992248,
+    "final_pa": 0.888671875,
+    "origin_asr": 1.0,
+    "origin_pa": 0.244140625,
+    "degradation_asr": 1.0,
+    "rd_asr": 0.015503875968992248,
+    "expected_behavior": "clean_preserving_suppress",
+    "asr_delta_origin_to_final": 0.9844961240310077,
+    "pa_delta_origin_to_final": 0.64453125
+  }
+}
