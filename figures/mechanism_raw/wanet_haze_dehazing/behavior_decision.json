@@ -1,0 +1,21 @@
+{
+  "label": "preserve_or_weak_effect",
+  "rationale": [
+    "Final ASR 0.8720 remains high while final CA 0.8281 is acceptable."
+  ],
+  "caveats": [],
+  "evidence": {
+    "defense_output_setting": "degradation_restoration_poisoned",
+    "final_clean_setting": "degradation_restoration_clean",
+    "final_ca": 0.828125,
+    "final_asr": 0.872,
+    "final_pa": 0.7421875,
+    "origin_asr": 0.976,
+    "origin_pa": 0.76171875,
+    "degradation_asr": 1.0,
+    "rd_asr": 0.872,
+    "expected_behavior": "preserve_or_weak_effect",
+    "asr_delta_origin_to_final": 0.10399999999999998,
+    "pa_delta_origin_to_final": -0.01953125
+  }
+}
