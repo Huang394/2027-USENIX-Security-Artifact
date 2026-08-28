@@ -1,0 +1,21 @@
+{
+  "label": "target_disruption_without_clean_recovery",
+  "rationale": [
+    "ASR drops by 0.9638, but final poisoned accuracy 0.0059 remains below 0.5000."
+  ],
+  "caveats": [],
+  "evidence": {
+    "defense_output_setting": "degradation_restoration_poisoned",
+    "final_clean_setting": "degradation_restoration_clean",
+    "final_ca": 0.85546875,
+    "final_asr": 0.03617571059431524,
+    "final_pa": 0.005859375,
+    "origin_asr": 1.0,
+    "origin_pa": 0.244140625,
+    "degradation_asr": 0.9896640826873385,
+    "rd_asr": 0.03617571059431524,
+    "expected_behavior": "target_disruption_without_clean_recovery",
+    "asr_delta_origin_to_final": 0.9638242894056848,
+    "pa_delta_origin_to_final": -0.23828125
+  }
+}

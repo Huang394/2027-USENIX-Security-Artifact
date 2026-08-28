@@ -1,0 +1,3 @@
+comparison,layer,mean_l2_delta,mean_cosine_similarity
+RD_vs_D,penultimate,3.1419827938079834,0.5942288041114807
+RD_vs_R,penultimate,2.0778708457946777,0.7598589062690735
