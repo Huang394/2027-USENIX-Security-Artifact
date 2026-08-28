@@ -1,0 +1,4 @@
+comparison,left_setting,right_setting,ca_delta,asr_delta,pa_delta,target_logit_delta,target_probability_delta,true_class_logit_delta,true_class_probability_delta
+D_vs_origin,origin_poisoned,degradation_poisoned,,-0.9359999999999999,0.091796875,-11.664050350140315,-0.3743364706192158,-6.78125795465894,0.05148740212298153
+RD_vs_origin,origin_poisoned,degradation_restoration_poisoned,,-0.9359999999999999,0.09375,-11.665374360221904,-0.3748853796065077,-6.7959541799500585,0.05064377206708459
+RD_vs_D,degradation_poisoned,degradation_restoration_poisoned,,0.0,0.001953125,-0.001324010081589222,-0.000548908987291874,-0.014696225291118026,-0.0008436300558969378

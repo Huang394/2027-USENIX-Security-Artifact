@@ -1,0 +1,17 @@
+setting,predicted_label,prediction_relation,count,rate,is_final_output
+degradation_poisoned,0,attacker_target,330,0.64453125,True
+degradation_poisoned,1,other_wrong,125,0.244140625,True
+degradation_poisoned,2,other_wrong,2,0.00390625,True
+degradation_poisoned,3,other_wrong,2,0.00390625,True
+degradation_poisoned,5,other_wrong,1,0.001953125,True
+degradation_poisoned,8,other_wrong,49,0.095703125,True
+degradation_poisoned,9,other_wrong,3,0.005859375,True
+degradation_restoration_poisoned,0,attacker_target,331,0.646484375,False
+degradation_restoration_poisoned,1,other_wrong,125,0.244140625,False
+degradation_restoration_poisoned,2,other_wrong,2,0.00390625,False
+degradation_restoration_poisoned,3,other_wrong,2,0.00390625,False
+degradation_restoration_poisoned,5,other_wrong,1,0.001953125,False
+degradation_restoration_poisoned,8,other_wrong,48,0.09375,False
+degradation_restoration_poisoned,9,other_wrong,3,0.005859375,False
+origin_poisoned,0,attacker_target,509,0.994140625,False
+origin_poisoned,1,ground_truth,3,0.005859375,False
