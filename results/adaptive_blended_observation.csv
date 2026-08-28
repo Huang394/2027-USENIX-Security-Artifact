@@ -1,0 +1,3 @@
+dataset,attack,pipeline,optim_seed,steps,lr,search_samples,eval_samples,original_asr_before_pipeline,original_asr_after_pipeline,adaptive_asr_after_pipeline,adaptive_minus_original,clean_pipeline_accuracy,source_json,notes
+Imagenette2,Blended,PABR,,300,0.05,5000,3530,0.997733711,0.971388102,1,0.02861189802,0.8549575071,logs/adaptive_pipeline/20260823_172513_Imagenette2_Blended_PABR.json,Supplementary Blended adaptive observation; not part of the BadNet seed table.
+Imagenette2,Blended,PABR,,300,0.001,5000,3530,0.997733711,0.1,0.4036827195,0.3036827195,0.8339943343,logs/adaptive_pipeline/20260823_182008_Imagenette2_Blended_PABR.json,Supplementary Blended adaptive observation; not part of the BadNet seed table.

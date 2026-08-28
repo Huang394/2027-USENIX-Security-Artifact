@@ -1,0 +1,4 @@
+dataset,threshold_profile,recovery_count,target_disruption_count,attack_preservation_count,utility_collapse_count,mixed_count,source_script_or_config
+Imagenette2,strict,24,7,73,44,44,scripts/classify_outcomes.py
+Imagenette2,paper_default,45,5,69,44,29,scripts/classify_outcomes.py
+Imagenette2,permissive,57,7,65,40,23,scripts/classify_outcomes.py

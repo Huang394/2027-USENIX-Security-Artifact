@@ -1,0 +1,6 @@
+dataset,attack,pipeline,optim_seed,steps,lr,search_samples,eval_samples,original_asr_before_pipeline,original_asr_after_pipeline,adaptive_asr_after_pipeline,adaptive_minus_original,clean_pipeline_accuracy,source_json
+Imagenette2,BadNet,PABR,1234,300,0.05,5000,3530,0.971388102,0.1252124646,0.9900849858,0.8648725212,0.8161473088,logs/adaptive_pipeline/20260823_194051_Imagenette2_BadNet_PABR.json
+Imagenette2,BadNet,PABR,2234,300,0.05,5000,3530,0.971388102,0.1252124646,0.9886685552,0.8634560907,0.8161473088,logs/adaptive_pipeline/20260823_200348_Imagenette2_BadNet_PABR.json
+Imagenette2,BadNet,PABR,3234,300,0.05,5000,3530,0.971388102,0.1252124646,0.9900849858,0.8648725212,0.8161473088,logs/adaptive_pipeline/20260823_201855_Imagenette2_BadNet_PABR.json
+Imagenette2,BadNet,PABR,4234,300,0.05,5000,3530,0.971388102,0.1252124646,0.9847025496,0.859490085,0.8161473088,logs/adaptive_pipeline/20260823_203408_Imagenette2_BadNet_PABR.json
+CIFAR10,BadNet,PABR,1234,300,0.05,5000,9000,1,0.9506666667,0.9353333333,-0.01533333333,0.8251111111,logs/adaptive_pipeline/20260824_112304_CIFAR10ImageFolder_BadNet_PABR.json

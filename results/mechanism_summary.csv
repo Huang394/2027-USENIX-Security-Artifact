@@ -1,0 +1,9 @@
+case_id,dataset,attack,pipeline,diagnostic_samples,delta_target_probability,delta_true_class_probability,final_margin,feature_ratio,source_case_dir
+gopro_badnet_blur3,Imagenette2,BadNet,degradation_restoration_poisoned,512,-0.6997194793,0.5114743563,-4.150815261993557,0.4568972536,figures/mechanism_raw/gopro_badnet_blur3
+gopro_wanet_blur3,Imagenette2,WaNet,degradation_restoration_poisoned,512,-0.1377123267,0.03091259422,0.36683810828253627,0.915962957,figures/mechanism_raw/gopro_wanet_blur3
+its_badnet_haze050,Imagenette2,BadNet,degradation_restoration_poisoned,512,-0.6462552903,0.4843117346,-2.897863114718348,0.467867927,figures/mechanism_raw/its_badnet_haze050
+its_blended_haze050,Imagenette2,Blended,degradation_restoration_poisoned,512,-0.9637942299,-0.2352787152,0.2204464357419056,0.9998798346,figures/mechanism_raw/its_blended_haze050
+ots_issba_haze015,Imagenette2,ISSBA,degradation_restoration_poisoned,512,-0.7856006885,0.587942625,-5.589527958887629,0.3197127121,figures/mechanism_raw/ots_issba_haze015
+rsblur_badnet,Imagenette2,BadNet,restoration_poisoned,512,0,0,6.189194110222161,0.7986462196,figures/mechanism_raw/rsblur_badnet
+wanet_haze_dehazing,Imagenette2,WaNet,degradation_restoration_poisoned,512,-0.06406606832,-0.02209659386,1.6463060528039932,0.9689912984,figures/mechanism_raw/wanet_haze_dehazing
+wanet_motion_blur_only_blur3,Imagenette2,WaNet,degradation_poisoned,512,-0.3748853796,0.05064377207,-1.7550989992450923,0.6685311411,figures/mechanism_raw/wanet_motion_blur_only_blur3
