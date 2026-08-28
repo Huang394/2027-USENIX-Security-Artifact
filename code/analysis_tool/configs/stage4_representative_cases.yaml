@@ -1,0 +1,82 @@
+cases:
+  - name: gopro_wanet_blur3
+    attack: WaNet
+    trigger_metadata: geometric_warp
+    degradation: motion_blur
+    strength: 3.0
+    restoration_prior: ConvIR-GoPro
+    defense_output_setting: degradation_restoration_poisoned
+    expected_behavior: attack_effect_recovery_or_counterproductive
+    analysis_modules:
+      - name: geometry_structure
+      - name: model_output
+      - name: feature_space
+    backdoored_model_path: path/to/backdoored_classifier.pt
+    clean_dataset_path: path/to/clean_dataset
+    poisoned_dataset_path: path/to/poisoned_dataset
+    degraded_clean_dataset_path: path/to/blur_clean_dataset
+    degraded_poisoned_dataset_path: path/to/blur_poisoned_dataset
+    restored_clean_dataset_path: path/to/restored_clean_dataset
+    restored_poisoned_dataset_path: path/to/restored_poisoned_dataset
+    restored_degraded_clean_dataset_path: path/to/gopro_restored_blur_clean_dataset
+    restored_degraded_poisoned_dataset_path: path/to/gopro_restored_blur_poisoned_dataset
+    model_arch: backdoorbox-resnet34
+    num_classes: 20
+    image_size: 256
+    target_class: 0
+    num_samples: 128
+    layers: [layer1, layer3, penultimate]
+
+  - name: ots_issba_haze015
+    attack: ISSBA
+    trigger_metadata: invisible_sample_specific
+    degradation: haze
+    strength: 0.15
+    restoration_prior: ConvIR-OTS
+    defense_output_setting: degradation_restoration_poisoned
+    expected_behavior: clean_preserving_suppress
+    analysis_modules:
+      - name: input_space
+      - name: frequency_global
+      - name: feature_invisible
+      - name: model_output
+      - name: feature_space
+    backdoored_model_path: path/to/backdoored_classifier.pt
+    clean_dataset_path: path/to/clean_dataset
+    poisoned_dataset_path: path/to/poisoned_dataset
+    degraded_clean_dataset_path: path/to/haze_clean_dataset
+    degraded_poisoned_dataset_path: path/to/haze_poisoned_dataset
+    restored_clean_dataset_path: path/to/restored_clean_dataset
+    restored_poisoned_dataset_path: path/to/restored_poisoned_dataset
+    restored_degraded_clean_dataset_path: path/to/ots_restored_haze_clean_dataset
+    restored_degraded_poisoned_dataset_path: path/to/ots_restored_haze_poisoned_dataset
+    model_arch: backdoorbox-resnet34
+    num_classes: 20
+    image_size: 256
+    target_class: 0
+    num_samples: 128
+    layers: [penultimate]
+
+  - name: wanet_motion_blur_only_blur3
+    attack: WaNet
+    trigger_metadata: geometric_warp
+    degradation: motion_blur
+    strength: 3.0
+    restoration_prior: none
+    defense_output_setting: degradation_poisoned
+    expected_behavior: clean_preserving_suppress
+    analysis_modules:
+      - name: geometry_structure
+      - name: model_output
+      - name: feature_space
+    backdoored_model_path: path/to/backdoored_classifier.pt
+    clean_dataset_path: path/to/clean_dataset
+    poisoned_dataset_path: path/to/poisoned_dataset
+    degraded_clean_dataset_path: path/to/blur_clean_dataset
+    degraded_poisoned_dataset_path: path/to/blur_poisoned_dataset
+    model_arch: backdoorbox-resnet34
+    num_classes: 20
+    image_size: 256
+    target_class: 0
+    num_samples: 128
+    layers: [penultimate]
