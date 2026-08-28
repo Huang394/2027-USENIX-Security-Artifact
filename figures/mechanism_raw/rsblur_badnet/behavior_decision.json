@@ -1,0 +1,19 @@
+{
+  "label": "destroy_or_low_utility_suppression",
+  "rationale": [
+    "Final clean accuracy 0.4004 is below 0.7000."
+  ],
+  "caveats": [],
+  "evidence": {
+    "defense_output_setting": "restoration_poisoned",
+    "final_clean_setting": "restoration_clean",
+    "final_ca": 0.400390625,
+    "final_asr": 0.13178294573643412,
+    "final_pa": 0.619140625,
+    "origin_asr": 0.9741602067183462,
+    "origin_pa": 0.263671875,
+    "degradation_asr": 0.9741602067183462,
+    "rd_asr": 0.9741602067183462,
+    "expected_behavior": "destroy_or_low_utility_suppression"
+  }
+}
