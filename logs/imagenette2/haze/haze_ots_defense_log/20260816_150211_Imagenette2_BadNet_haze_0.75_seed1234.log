@@ -1,0 +1,45 @@
+2026-08-16 15:02:11,077 [INFO] Run log: logs/20260816_150211_Imagenette2_BadNet_haze_0.75_seed1234.log
+Using the Imagenette2
+The at_threshold: 1
+2026-08-16 15:02:11,371 [INFO] Using device: cuda:0
+====================================================================================
+Non-default run settings
+====================================================================================
+restorer_ckpt: ./pretrain/ots-base.pkl
+degradation_type: haze
+degradation_strength: 0.75
+deg: haze
+deg_scale: 0.75
+purify_clean_test: True
+purify_poisoned_test: True
+use_purified_clean_test: True
+use_purified_pois_test: True
+at_threshold: 1
+------------------------------------------------------------------------------------
+Runtime metadata
+------------------------------------------------------------------------------------
+mode: 3
+classes: 20
+device: cuda:0
+run_log_path: logs/20260816_150211_Imagenette2_BadNet_haze_0.75_seed1234.log
+====================================================================================
+Mode is 3
+Using the pattern size: 9*9
+====================================================================================
+purified_ins(args, clean_train, purified_clean_test, poisoned_train, purified_pois_test)
+====================================================================================
+Using Pre-trained model: Imagenette2_pretrain/BadNet/Res_34_256
+=================================================Loading Model ==================================================
+=================================================    Loaded    ==================================================
+==========Test result on benign test dataset(CA)==========
+[2026-08-16_15:17:09] Top-1 correct / Total: 3185/3925, Top-1 accuracy: 0.8114649681528663, Top-5 correct / Total: 3855/3925, Top-5 accuracy: 0.9821656050955414, time: 21.849008321762085
+ class_acc:{0: 0.875968992248062, 1: 0.8075949367088607, 2: 0.907563025210084, 3: 0.572538860103627, 4: 0.8753056234718827, 5: 0.7639593908629442, 6: 0.87146529562982, 7: 0.7303102625298329, 8: 0.849624060150376, 9: 0.8692307692307693}
+ASR_lables tensor([1, 1, 1,  ..., 1, 1, 1])
+==========Test result on poisoned test dataset(ASR)(Not including images with original label same as attack label)==========
+[2026-08-16_15:17:30] Top-1 correct / Total: 2376/3530, Top-1 accuracy: 0.6730878186968838, Top-5 correct / Total: 3530/3530, Top-5 accuracy: 1.0, time: 42.583085775375366
+ class_acc:{1: 0.6730878186968838}
+PA_lables tensor([0, 0, 0,  ..., 9, 9, 9])
+==========Test result on poisoned test dataset(PA)==========
+[2026-08-16_15:17:52] Top-1 correct / Total: 1516/3925, Top-1 accuracy: 0.3862420382165605, Top-5 correct / Total: 3841/3925, Top-5 accuracy: 0.9785987261146497, time: 64.139408826828
+ class_acc:{0: 0.3385012919896641, 1: 1.0, 2: 0.43137254901960786, 3: 0.08549222797927461, 4: 0.43031784841075793, 5: 0.3197969543147208, 6: 0.3033419023136247, 7: 0.18377088305489261, 8: 0.3558897243107769, 9: 0.4205128205128205}
+=================================================End==================================================
