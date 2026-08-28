@@ -1,0 +1,46 @@
+2026-08-23 09:35:03,657 [INFO] Run log: logs/20260823_093503_CIFAR10ImageFolder_BadNet_none_0.0_seed1234.log
+Using the CIFAR10ImageFolder
+The at_threshold: 1
+2026-08-23 09:35:04,085 [INFO] Using device: cuda:0
+====================================================================================
+Non-default run settings
+====================================================================================
+dataset: CIFAR10ImageFolder
+img_size: 32
+deg: none
+deg_scale: 0.0
+purify_clean_test: True
+purify_poisoned_test: True
+use_purified_clean_test: True
+use_purified_pois_test: True
+at_threshold: 1
+degradation_type: none
+degradation_strength: 0.0
+use_conv_ir: True
+------------------------------------------------------------------------------------
+Runtime metadata
+------------------------------------------------------------------------------------
+mode: 3
+classes: 10
+device: cuda:0
+run_log_path: logs/20260823_093503_CIFAR10ImageFolder_BadNet_none_0.0_seed1234.log
+====================================================================================
+Mode is 3
+====================================================================================
+purified_ins(args, clean_train, purified_clean_test, poisoned_train, purified_pois_test)
+====================================================================================
+Using Pre-trained model: CIFAR10ImageFolder_pretrain/BadNet/Res_34_32
+=================================================Loading Model ==================================================
+=================================================    Loaded    ==================================================
+==========Test result on benign test dataset(CA)==========
+[2026-08-23_09:42:44] Top-1 correct / Total: 8743/10000, Top-1 accuracy: 0.8743, Top-5 correct / Total: 9931/10000, Top-5 accuracy: 0.9931, time: 0.8599574565887451
+ class_acc:{0: 0.902, 1: 0.944, 2: 0.818, 3: 0.718, 4: 0.845, 5: 0.82, 6: 0.917, 7: 0.916, 8: 0.93, 9: 0.933}
+ASR_lables tensor([1, 1, 1,  ..., 1, 1, 1])
+==========Test result on poisoned test dataset(ASR)(Not including images with original label same as attack label)==========
+[2026-08-23_09:43:07] Top-1 correct / Total: 8998/9000, Top-1 accuracy: 0.9997777777777778, Top-5 correct / Total: 9000/9000, Top-5 accuracy: 1.0, time: 23.908316612243652
+ class_acc:{1: 0.9997777777777778}
+PA_lables tensor([0, 0, 0,  ..., 9, 9, 9])
+==========Test result on poisoned test dataset(PA)==========
+[2026-08-23_09:43:08] Top-1 correct / Total: 1002/10000, Top-1 accuracy: 0.1002, Top-5 correct / Total: 8599/10000, Top-5 accuracy: 0.8599, time: 24.63874650001526
+ class_acc:{0: 0.001, 1: 1.0, 2: 0.0, 3: 0.0, 4: 0.0, 5: 0.0, 6: 0.001, 7: 0.0, 8: 0.0, 9: 0.0}
+=================================================End==================================================
