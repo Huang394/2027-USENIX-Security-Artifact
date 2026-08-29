@@ -13,8 +13,8 @@ ZIP is the code release for the NeurIPS 2023 paper `Black-box Backdoor Defense v
 For artifact review, the primary audit path is log-based:
 
 ```powershell
-conda run -n tf python ..\..\scripts\parse_logs.py
-conda run -n tf python ..\..\scripts\classify_outcomes.py
+python ..\..\scripts\parse_logs.py
+python ..\..\scripts\classify_outcomes.py
 ```
 
 Full experiment reruns require external datasets, victim checkpoints, diffusion assets, and restoration checkpoints documented in `../../REPRODUCIBILITY.md`.
@@ -69,7 +69,7 @@ Adaptive stress-test JSON evidence is in:
 The normal evaluation entry point is `main.py`. Example shape:
 
 ```powershell
-conda run -n tf python main.py `
+python main.py `
   --dataset Imagenette2 `
   --attack_method BadNet `
   --img_size 256 `
