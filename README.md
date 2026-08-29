@@ -83,8 +83,8 @@ results/mechanism_visual_evidence_index.csv
 ## Smoke Tests
 
 ```powershell
-conda run -n tf python scripts\run_demo_metric_check.py
-conda run -n tf python scripts\run_demo_mechanism.py
+python scripts\run_demo_metric_check.py
+python scripts\run_demo_mechanism.py
 ```
 
 These checks parse released logs and already-generated mechanism evidence. They do not require full datasets or model checkpoints, and they do not establish empirical claims beyond confirming that the artifact tooling runs end to end.

@@ -21,9 +21,9 @@ Goal: regenerate paper-level CA, ASR, PA, outcome accounting, and adaptive stres
 Run:
 
 ```powershell
-conda run -n tf python scripts\parse_logs.py
-conda run -n tf python scripts\classify_outcomes.py
-conda run -n tf python scripts\reproduce_tables.py
+python scripts\parse_logs.py
+python scripts\classify_outcomes.py
+python scripts\reproduce_tables.py
 ```
 
 Checks:
@@ -42,8 +42,8 @@ Goal: inspect and regenerate the mechanism-analysis summary table and visual-evi
 Run:
 
 ```powershell
-conda run -n tf python scripts\reproduce_tables.py
-conda run -n tf python scripts\reproduce_figures.py
+python scripts\reproduce_tables.py
+python scripts\reproduce_figures.py
 ```
 
 Checks:
@@ -59,8 +59,8 @@ Goal: verify that the artifact parser, classifier, adaptive summarizer, and mech
 Run:
 
 ```powershell
-conda run -n tf python scripts\run_demo_metric_check.py
-conda run -n tf python scripts\run_demo_mechanism.py
+python scripts\run_demo_metric_check.py
+python scripts\run_demo_mechanism.py
 ```
 
 The smoke tests use released logs and summaries. They do not download datasets, load checkpoints, or rerun expensive purification pipelines.
