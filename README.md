@@ -60,10 +60,10 @@ For GPU reruns, install a `torch`/`torchvision` build matching the review machin
 Run from the artifact root:
 
 ```powershell
-conda run -n tf python scripts\parse_logs.py
-conda run -n tf python scripts\classify_outcomes.py
-conda run -n tf python scripts\reproduce_tables.py
-conda run -n tf python scripts\reproduce_figures.py
+python scripts\parse_logs.py
+python scripts\classify_outcomes.py
+python scripts\reproduce_tables.py
+python scripts\reproduce_figures.py
 ```
 
 Expected outputs include:
