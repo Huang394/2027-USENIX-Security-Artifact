@@ -9,9 +9,9 @@ The analysis compares paired clean, poisoned, degraded, restored, and final-defe
 For artifact review, use the top-level scripts:
 
 ```powershell
-conda run -n tf python ..\..\scripts\reproduce_tables.py
-conda run -n tf python ..\..\scripts\reproduce_figures.py
-conda run -n tf python ..\..\scripts\run_demo_mechanism.py
+python ..\..\scripts\reproduce_tables.py
+python ..\..\scripts\reproduce_figures.py
+python ..\..\scripts\run_demo_mechanism.py
 ```
 
 These commands summarize and index already-released mechanism evidence. They do not require full datasets or checkpoints.
